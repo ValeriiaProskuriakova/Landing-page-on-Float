@@ -1,0 +1,635 @@
+@import "reset.css";
+@import "../fonts/fonts.css";
+
+/* ------- Reset css   -----------*/
+*{
+	font-size: 1em;
+}
+
+.wrapper{
+	width: 100%;
+	margin:auto;
+	position: relative;
+}
+/*---------- Псевдораспорки ----------*/
+header .top_header::after, header .bottom_header::after, ul::after, main .services::after,
+main .recent_work::after, main .dots::after, main .twitter::after, header .top_header li:after{
+        content: " ";
+        display: table;
+        clear: both;
+    }
+
+/*-----To top styles------*/
+.wrapper .to_top{
+	display: block;
+	position: fixed;
+	right: 5em;
+	top: 90%;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: url(../img/Frame3.png) no-repeat center/cover;
+	z-index: 2;
+	background-position: 0 -7px;
+}
+
+/*-----Header styles------*/
+ header{
+ 	width:100%;
+ 	padding:0 7em;
+ 	font-family: 'Libre Franklin', sans-serif;
+ 	background-color: #04272BFF;
+ 	
+ }
+ /*-----Header styles top------*/
+ header .top_header {
+ 	width:100%;
+ 	margin-bottom:1em;
+ 	display:flex;
+ 
+ }
+header .top_header .logo{
+	font-size:2em;
+	width: 6em;
+	margin:auto;
+	margin-left:0;
+	color: white;
+	background-image:radial-gradient(3em 2em at 50% 0,#02444AFF, #04272BFF);
+	padding-top: 2rem;
+}
+header .top_header nav {
+	width:auto;
+	font-size: 1em;
+	color: #28C8D1FF;
+	font-weight:bold;
+	padding-top: 2rem;
+}
+header .top_header a{
+	float: right;
+	display: block;
+	padding: 0.7em 1em;
+}
+header .top_header a.active{
+	background-image: linear-gradient(to top, #05546767, #11B8BEFF);
+	font-weight: 2000;
+}
+header .top_header a:not(.active):hover{
+	background-image: linear-gradient(to top, #05546767, #11B8BEFF);
+	cursor: pointer;
+}
+
+header .top_header a:not(.active):hover~a.active{
+	background:none;
+}
+
+header hr{
+	height: 0.2em;
+	background-image:radial-gradient(40em 1em at 50% 0,#33787BFF, transparent);
+}
+
+ /*-----Header styles bottom------*/
+
+header .bottom_header{
+	width:100%;
+	padding: 1em 0;
+	background-color: #04272BFF;
+	background-image:radial-gradient(40em 2em at 50% 0,#0D5B5DFF, transparent);	
+}
+header .bottom_header .intro{
+	float:left;
+	width:20em;
+	color: white;
+}
+header .bottom_header .intro h1{
+	font-size: 3em;
+	line-height: 1;
+}
+header .bottom_header .intro p:first-of-type{
+	font-size: 2em;
+}
+header .bottom_header .intro p:last-of-type{
+	font-size: 1em;
+	margin-top: 0.5em;
+	color:#11B8BEFF;
+}
+header .bottom_header figure{
+ 	background: url(../img/woman.jpg) no-repeat 40% 20%/cover;
+	float:right;
+	width:40em;
+	height: 20em;
+	position: relative;
+}
+header .bottom_header figcaption:first-of-type{
+	background: rgba(0,0,0, 0.5);
+	padding: 1em ;
+	color: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+header .bottom_header figure img.left{
+	background: rgba(0,0,0, 0.5);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 3em;
+	margin-top: -1.5em;
+}
+header .bottom_header figure img.right{
+	background: rgba(0,0,0, 0.5);
+	position: absolute;
+	top: 50%;
+	right: 0;
+	height: 3em;
+	margin-top: -1.5em;
+}
+header .bottom_header div.shadow{
+    background: rgba(17,184,190, .5);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+header+hr{
+	height: 0.7em;
+	background-image: radial-gradient(40em 0.2em at 50% 50%,#868685FF,#ECECECFF);
+}
+
+/*----Header end---*/
+
+/*----Main style---*/
+
+main {
+	width:100%;
+	padding:1em 5em;
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #F0F0F0FF;
+}
+main .dots{
+	width: 100%;
+	margin-bottom: 1em;
+	
+}
+main .dots article{
+	height: 0.7em;
+	width: 0.7em;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	float: right;
+	margin-right: 0.7em;
+}
+main .dots article:first-of-type{
+	margin-right: 14em;
+}
+main .dots article:last-of-type{
+	background-color: #5B5B5BFF;
+	background-image: linear-gradient(to bottom, #5B5B5BFF 20%, #bbb);
+}
+main hr{
+	height: 1.5px;
+	background-image:radial-gradient(500px 5px at 50% 0,#BBBBBBFF,transparent);
+
+}
+
+/*----Main Services style---*/
+
+main .services {
+	width:100%;
+}
+
+main .services article {
+	width:calc((100% - 0.5em*2) / 3);
+	margin-right: 0.5em;
+	float:left;
+	padding:2em;
+}
+main .services>article{
+	margin-right:0;
+}
+main .services article div{
+	display: flex;
+	margin-bottom: 1em;
+}
+main .services article span.icon {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    vertical-align: bottom;
+    background: url(../img/Webp.net-resizeimage.jpg) no-repeat;
+    border-radius: 50%;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 1em;
+}
+main .services article div .goal{
+	background-position: -60px -44px;
+}
+main .services article div .result{
+	background-position: -60px -150px;
+}
+main .services article div .people{
+	background-position: -4px -150px;
+}
+
+main .services article h2{
+	display:inline-block;
+	vertical-align:middle;
+	font-size: 1.5em;
+	margin: auto;
+	margin-left: 0;
+}
+main .services article p{
+	font-size: 1em;
+
+}
+main .services a{
+	display: block;
+	border: 1px solid #bbb;
+	border-radius: 1em;
+	padding: 0.4em 0.9em;
+	box-shadow: 0.1em 0.1em 0.2em #bbb;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1em;
+	margin-top: 1em;
+	color: black;
+	width: 7.5em;
+}
+/*----Main Services style End---*/
+
+/*----Main Recent Work style---*/
+main .recent_work{
+	width:100%;
+	margin-bottom:1.5em;
+}
+main .recent_work article{
+	width:calc((100% - 0.5em*2) / 3);
+	margin-right: 0.5em;
+	float:left;
+	padding:2em;
+}
+main .recent_work>article{
+	margin-right:0;
+}
+main .recent_work article figure{
+	min-height: 10em;
+	border: 3px solid #D6D6D7FF;
+	border-radius: 3px;
+	position: relative;
+	margin-bottom: 0.5em;
+}
+main .recent_work article figure:after{
+content: "";
+    position: absolute;
+    width: 100%;
+    top: 9.7em;
+    left: 0;
+    background-image: radial-gradient(7em 0.1em at 50% 30%,#868685FF,#ECECECFF);
+    height: 0.4em;
+}
+main .recent_work .recent_work_wrapper article:first-of-type figure{
+	background: url(../img/photovoltaic1.jpg) no-repeat center/cover;
+}
+main .recent_work .recent_work_wrapper article:last-of-type figure{
+	background: url(../img/photovoltaic2.jpg) no-repeat center/cover;
+}
+main .recent_work>article figure{
+	background: url(../img/photovoltaic3.jpg) no-repeat center/cover;
+}
+main .recent_work article h2{
+    line-height:2; 
+	font-size: 1.5em;
+}
+main .recent_work article p{
+	font-size: 1em;
+}
+main .recent_work a{
+	display: block;
+	border: 1px solid #bbb;
+	border-radius: 1em;
+	padding: 0.4em 0.9em;
+	box-shadow: 0.1em 0.1em 0.2em #bbb;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1em;
+	margin-top: 1em;
+	width: 7.5em;
+	color: black;
+}
+
+
+/*----Main Recent Work end----*/
+
+main .twitter {
+	width: 100%;
+    background-color: #F0F0F0FF;
+    min-height: 2em;
+    padding: 0.8em;
+    font-size: 1em;
+    display: flex;
+}
+main .twitter_icon {
+    width: 38px;
+    height: 38px;
+    background: url(../img/twitter.png) no-repeat;
+    border-radius: 50%;
+    background-position: -1px -2px;
+    margin: auto;
+ }
+ main .twitter .icon_text{
+ 	display: flex;
+ }
+ main .twitter p{
+    width: 90%;
+    margin: auto;
+
+ }
+ main .twitter a{
+ 	display: block;
+ 	width: 9em;
+ 	border: 1px solid #bbb;
+	padding: 0.5em 0.7em;
+	margin: auto;
+	box-shadow: 0.1em 0.1em 0.2em #bbb;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1em;
+	color: black;
+	text-align: center;
+ }
+/*----Main end---*/
+
+/*----Footer style---*/
+
+footer{
+	width: 100%;
+	background-color: #04272BFF;
+	padding: 0 8em;	
+	min-height:7em;
+	line-height: 7em;
+	font-size: 0.8em;
+	font-family: 'Libre Franklin', sans-serif;
+	color: #11B8BEFF;
+	font-weight: bold;
+}
+footer nav{
+	float:left;
+	width:auto;
+}
+footer li{
+	float: left;
+	cursor: pointer;
+
+}
+footer a{
+	margin-right:1em;
+	font-size: 1em;
+}
+footer section p{
+	float: right;
+	width:auto;
+	font-size: 1em;
+	margin-right: 3em;
+}
+
+/*------------1200 px--------------*/
+@media all and (max-width:1200px){
+	header .bottom_header figure{
+		width:30em;
+		height:15em;
+	}
+	 main .twitter a{
+	 	font-size:0.8em;
+	 	width:11em;
+	 }
+}
+
+/*------------1024 px--------------*/
+@media all and (max-width:1024px){
+
+	 header{
+	 	padding: 0 2em;
+	 }
+	 header .top_header{
+	 	display: block;
+	 }
+	 header .top_header .logo{
+	 	margin: auto;
+	 }
+	 header .top_header nav{
+	 	display: flex;
+	 }
+	 header .top_header ul{
+	 	margin: auto;
+	 }
+	 header .top_header+hr{
+	 	background-image:radial-gradient(20em 1em at 50% 0,#33787BFF, transparent);
+	 }
+	 header .bottom_header{
+	 	background-image:radial-gradient(20em 2em at 50% 0,#0D5B5DFF, transparent);
+	 }
+	 header .bottom_header .intro{
+	 	display: block;
+	 	width: auto;
+	 	margin-bottom:1em;
+	 }
+	 header .bottom_header figure{
+	 	display: block;
+	 	width: 100%;
+	 	background-position:0 20%;
+	 }
+	 header+hr{
+	 	height: 0.2em;
+	    background-image: radial-gradient(20em 0.2em at 50% 50%,#868685FF,#ECECECFF);
+	}
+	main .services .services_wrapper, main .recent_work .recent_work_wrapper{
+		content: " ";
+        display: table;
+        clear: both;
+	}
+	 main{
+	 	padding: 1em 2em;
+	 }
+	 main .wrapper_dots{
+	 	display:flex;
+	 }
+	 main .dots{
+	 	width:auto;
+	 	margin:auto;
+	 	margin-bottom:1em;
+	 }
+	 main .dots article:first-of-type{
+	 	margin-right:0;
+	 }
+	 main .services, main .recent_work{
+	 	margin-bottom:0em;
+	 }
+	 main .services .services_wrapper article, main .recent_work .recent_work_wrapper article{
+	 	width: 50%;
+    	padding: 1em;
+        float: left;
+        margin: 0;
+	 }
+	 main .services article div{
+	 	margin-bottom:0.5em;
+	 }
+	 main .services>article, main .recent_work>article{
+	 	width: 100%;
+	 	float: none;
+	 	padding: 1em;
+	 }
+	 main .recent_work article figure:after{
+	 	width:100%;
+	 }
+	 main .twitter{
+	 	display: block;
+	 }
+	 main .twitter .icon_text{
+	 	display: flex;
+	 }
+	 main .twitter .twitter_icon{
+	 	margin-right: 1.5em;
+	 }
+	 main .twitter p{
+	 	width:90%;
+	 }
+	 main .twitter a{
+	 	margin-top: 1em;
+	 	font-size:0.8em;
+	 }
+	 footer{
+	 	line-height: 1;
+	 	padding: 2em 8em;
+	 }
+	 footer nav{
+	 	display: flex;
+	 	margin-bottom: 2em;
+	 	float: none;
+	 }
+	 footer ul{
+	 	margin: auto;
+	 }
+	 footer li:last-of-type a{
+	 	margin: 0;
+	 }
+	 footer .copyright{
+	 	width: 100%;
+	 }
+	 footer .copyright p{
+	 	width: 30%;
+	 	margin: auto;
+	 	float: none;
+	 	text-align: center;
+		font-size: 0.7em;
+	}
+}
+
+/*-------------570 px--------------*/
+@media all and (max-width: 570px){
+	header{
+		padding: 0 1em;
+	}
+	header .top_header .logo{
+		font-size: 1.2em;
+	}
+	header .top_header nav{
+		font-size: 0.8em;
+		padding-top: 1rem;
+	}
+	header .top_header a{
+		padding: 0.6em 0.5em;
+	}
+	header .top_header+hr{
+	 	background-image: radial-gradient(12em 1em at 50% 0, #33787BFF, transparent);
+	}
+	header .bottom_header{
+		background-image: radial-gradient(12em 2em at 50% 0,#0D5B5DFF, transparent);
+	}
+	header .bottom_header .intro h1{
+		font-size: 1.2em;
+		margin-bottom: 0.3em;
+	}	
+	header .bottom_header .intro p:first-of-type{
+	 	font-size: 0.8em;
+	}
+	header .bottom_header .intro p:last-of-type{
+		font-size: 0.8em;
+	}
+	header .bottom_header figure{
+		width: 100%;
+		height: 10em;
+	}
+	header+hr{
+		 background-image: radial-gradient(15em 0.2em at 50% 50%,#868685FF,#ECECECFF);
+	}
+	main{
+		font-size:0.9em;
+		padding: 0.5em 1em 0;
+	}
+	main .dots{
+		margin-bottom: 0.5em;
+	}
+	main .dots article{
+		height: 0.5em;
+        width: 0.5em;
+	}
+	main hr{
+		height: 0.1em;
+    	background-image: radial-gradient(15em 0.2em at 50% 0,#BBBBBBFF,transparent);
+    	margin-bottom: 1em;
+	}
+	main .services article, main .recent_work article, 
+	main .services .services_wrapper article, main .recent_work .recent_work_wrapper article{
+		width: 100%;
+		padding: 0;
+		margin: 0 0 1em 0;
+		float: none;
+	}
+	main .recent_work+hr{
+		margin-bottom: 0;
+	}
+	main .twitter{
+		display: block;
+		padding: 1em 0;
+	}
+	main .icon_text{
+		margin-bottom: 0.7em;
+	}
+	main .twitter_icon{
+		width: 45px;
+		height: 45px;
+	}
+	main .twitter p{
+		margin:auto;
+	}
+	main .twitter a{
+		font-size: 0.8em;
+		width: 8em;
+		padding: 0.5em 1.2em;
+		margin-top: 0.5em;
+	}
+	footer{
+		font-size:0.7em;
+		padding: 1em 1em;
+		min-height: 5em;
+	}
+	footer nav{
+		margin-bottom: 1em;
+	}
+	.wrapper .to_top{
+		right: 1.5em;
+	}	
+}
+/*-------------320 px--------------*/
+@media all and (max-width: 360px){
+	header .top_header nav{
+		font-size: 0.7em;
+	}
+}
+
+
+
+
+
+
+

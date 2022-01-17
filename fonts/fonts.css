@@ -1,0 +1,16 @@
+    @font-face{ /*чтоб подключить скачанные шрифты (.ttf, format !, style and weight also need to be indicated (normal/italic, bold/normal)!!!
+    По каждому шрифту отдельное правило фонт фейс
+    Мы выносим все фонт фейсы в отдельный ссс файл и подключаем сюда через импорт*/
+        font-family: Josefin Sans;
+        src: url("./fonts/Josefin_Sans/static/JosefinSans-Light.ttf") format("truetype");
+        font-style: normal;
+        font-weight: normal;
+    }
+    @font-face{ /*чтоб подключить скачанные шрифты (.ttf, format !, style and weight also need to be indicated (normal/italic, bold/normal)!!!
+    По каждому шрифту отдельное правило фонт фейс
+    Мы выносим все фонт фейсы в отдельный ссс файл и подключаем сюда через импорт*/
+        font-family: Libre Franklin;
+        src: url("./fonts/Libre_Franklin/static/LibreFranklin-Light.ttf") format("truetype");
+        font-style: normal;
+        font-weight: normal;
+    }
