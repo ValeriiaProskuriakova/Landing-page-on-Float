@@ -1,4 +1,4 @@
 # Responsive
 <pre>
-Responsive layout on CSS floats for a landing page
+Responsive landing page based on CSS floats
 </pre>
